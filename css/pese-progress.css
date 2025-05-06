@@ -1,0 +1,872 @@
+/* PESE Progress Page Styles */
+.pese-main {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+/* Navigation Logo */
+.navigation .logo-text {
+    color: #ffffff !important; /* Pure white color */
+    text-decoration: none;
+}
+
+/* Hero Section */
+.pese-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    background-color: #000;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title-main {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: titleGlow 2s infinite alternate;
+}
+
+.title-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+}
+
+/* Progress Circle */
+.progress-circle {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+}
+
+.circular-chart {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 3;
+}
+
+.circle {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+.percentage {
+    fill: #fff;
+    font-size: 0.28em;
+    text-anchor: middle;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    dominant-baseline: middle;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+/* SWOC Section */
+.swoc-section {
+    background: #181818 !important;
+    padding: 4rem 0;
+}
+
+.swoc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.swoc-card {
+    background: rgba(20, 20, 30, 0.85); /* black and translucent */
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    min-width: 320px;
+    max-width: 400px;
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid transparent;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+}
+
+.swoc-card.animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.swoc-card:hover {
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+    transform: translateY(-6px) scale(1.03);
+    background: rgba(30, 30, 50, 0.95);
+}
+
+.swoc-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.swoc-header i {
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.swoc-card:hover .swoc-header i {
+    transform: scale(1.2);
+}
+
+.swoc-header h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.swoc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.swoc-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+.swoc-list li:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.swoc-list i {
+    font-size: 1.2rem;
+    min-width: 24px;
+    transition: transform 0.3s ease;
+}
+
+.swoc-list li:hover i {
+    transform: scale(1.2);
+}
+
+/* Color-coded icons */
+.strengths .swoc-header i,
+.strengths .swoc-list i {
+    color: #4CAF50;
+}
+
+.weaknesses .swoc-header i,
+.weaknesses .swoc-list i {
+    color: #FF5252;
+}
+
+.opportunities .swoc-header i,
+.opportunities .swoc-list i {
+    color: #2196F3;
+}
+
+.challenges .swoc-header i,
+.challenges .swoc-list i {
+    color: #FFC107;
+}
+
+/* Action Plan Section */
+.action-plan {
+    padding: 4rem 0;
+    background: #111;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.timeline-item.animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.timeline-icon i {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-icon {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.timeline-item:hover .timeline-icon i {
+    transform: scale(1.2);
+}
+
+.timeline-content, .career-goal-card.action-plan-style {
+    margin: 0 auto 2.5rem auto;
+    display: block;
+    max-width: 800px;
+    text-align: center;
+}
+
+.timeline-emoji {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+}
+
+.timeline-content h3, .career-goal-title, .career-goal-heading, .career-goal-subheading {
+    text-align: center;
+}
+
+.timeline-content {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-content li {
+    color: #e0e0e0;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.timeline-content li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .swoc-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .title-main {
+        font-size: 3rem;
+    }
+    
+    .title-sub {
+        font-size: 1.3rem;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .timeline-icon {
+        margin: 0 0 1rem 0;
+    }
+    
+    .timeline-content {
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pese-main {
+        padding: 1rem;
+    }
+    
+    .title-main {
+        font-size: 2.5rem;
+    }
+    
+    .title-sub {
+        font-size: 1.1rem;
+    }
+    
+    .swoc-card {
+        padding: 1.5rem;
+    }
+    
+    .swoc-header h4 {
+        font-size: 1.3rem;
+    }
+    
+    .swoc-list li {
+        font-size: 1rem;
+    }
+}
+
+/* Background image for the page */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: url('../images/bg/black-texture.jpg') center center/cover no-repeat, #000;
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+body, .pese-main, .pese-hero {
+    background: transparent !important;
+}
+
+/* SWOC Quadrant Layout */
+.swoc-quadrant {
+    background: #181818;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+    padding: 2.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 3rem auto 2rem auto;
+    z-index: 2;
+    position: relative;
+}
+
+.swoc-card {
+    background: rgba(20, 20, 20, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+    border: 1.5px solid rgba(255,255,255,0.08);
+    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 340px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.swoc-card:hover {
+    box-shadow: 0 16px 40px 0 rgba(0,0,0,0.65);
+    transform: translateY(-8px) scale(1.03);
+    border-color: rgba(255,255,255,0.18);
+}
+
+.swoc-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    width: 100%;
+}
+.swoc-header i {
+    font-size: 2rem;
+}
+.swoc-header h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Mini-cards inside each quadrant */
+.swoc-mini-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+.mini-card {
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.mini-card:hover {
+    background: rgba(255,255,255,0.10);
+    color: #fff;
+    transform: translateX(6px) scale(1.03);
+}
+
+/* Colorful icons for each quadrant */
+.strengths .swoc-header i, .strengths .mini-card i { color: #4CAF50; }
+.weaknesses .swoc-header i, .weaknesses .mini-card i { color: #FF5252; }
+.opportunities .swoc-header i, .opportunities .mini-card i { color: #2196F3; }
+.challenges .swoc-header i, .challenges .mini-card i { color: #FFC107; }
+
+/* Responsive Quadrant */
+@media (max-width: 992px) {
+    .swoc-quadrant {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 2rem;
+    }
+    .swoc-card {
+        min-height: 0;
+    }
+}
+
+body, html {
+    background: #1e1e2f !important;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Headings */
+.hero-title, .section-title, .swoc-header h4 {
+    font-family: 'Merriweather', serif;
+    color: #e0e0e0;
+    text-align: center;
+    font-weight: 700;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: #b0b0b0;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.progress-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.progress-svg {
+    width: 120px;
+    height: 120px;
+}
+
+.progress-bg {
+    fill: none;
+    stroke: #2c2c3c;
+    stroke-width: 12;
+}
+
+.progress-bar {
+    fill: none;
+    stroke: #4CAF50;
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 339.292;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    animation: progress-anim 2s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+@keyframes progress-anim {
+    to {
+        stroke-dashoffset: 101.7876; /* 70% progress */
+    }
+}
+
+.progress-text {
+    font-family: 'Merriweather', serif;
+    fill: #e0e0e0;
+    font-size: 1.2rem;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-weight: 700;
+}
+
+.progress-note {
+    color: #b0b0b0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* SWOC Cards Layout */
+.swoc-section {
+    background: #0c0c0f !important;
+    padding: 4rem 0 2rem 0;
+}
+
+.swoc-cards-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.swoc-card {
+    background: #070708;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    min-width: 320px;
+    max-width: 400px;
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid transparent;
+    margin-bottom: 2rem;
+}
+
+.swoc-header {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+.swoc-header i {
+    font-size: 1.5rem;
+}
+
+.swoc-card.strengths {
+    border-color: #4CAF50;
+}
+.swoc-card.strengths .swoc-header i {
+    color: #4CAF50;
+}
+.swoc-card.weaknesses {
+    border-color: #FF5252;
+}
+.swoc-card.weaknesses .swoc-header i {
+    color: #FF5252;
+}
+
+.swoc-card.opportunities {
+    border-color: #2196F3;
+}
+.swoc-card.opportunities .swoc-header i,
+.swoc-card.opportunities .swoc-list li i {
+    color: #2196F3;
+}
+.swoc-card.challenges {
+    border-color: #FFC107;
+}
+.swoc-card.challenges .swoc-header i,
+.swoc-card.challenges .swoc-list li i {
+    color: #FFC107;
+}
+
+.swoc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.swoc-list li {
+    background: #232334;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    color: #e0e0e0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.7rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.swoc-card.strengths .swoc-list li i {
+    color: #4CAF50;
+}
+.swoc-card.weaknesses .swoc-list li i {
+    color: #FF5252;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .swoc-cards-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .swoc-card {
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+    }
+    .container {
+        padding: 0 0.5rem;
+    }
+}
+
+.liquid-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.liquid-loader {
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+
+.liquid-wave {
+    fill: url(#liquid-gradient);
+    opacity: 0.85;
+    animation: none; /* JS will animate the path */
+}
+
+.liquid-wave.wave2 {
+    opacity: 0.6;
+}
+
+.liquid-text {
+    font-family: 'Merriweather', serif;
+    fill: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .liquid-loader {
+        width: 80px;
+        height: 80px;
+    }
+    .liquid-text {
+        font-size: 0.9rem;
+    }
+}
+
+.career-goal-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem 0 3rem 0;
+}
+
+.career-goal-card.action-plan-style {
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    color: #fff;
+    margin: 0 auto 2.5rem auto;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    display: block;
+}
+.career-goal-title, .career-goal-heading, .career-goal-subheading, .career-goal-body, .career-goal-facts li {
+    color: #fff;
+    filter: brightness(1.1);
+}
+
+.career-goal-title {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+.career-goal-heading {
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+.career-goal-body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.13rem;
+    color: #fff;
+    margin-bottom: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+}
+.career-goal-subheading {
+    font-family: 'Merriweather', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    text-align: center;
+}
+.career-goal-facts {
+    list-style: disc inside;
+    padding: 0;
+    margin: 1.3rem 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+}
+.career-goal-facts li {
+    background: transparent;
+    border-radius: 0;
+    padding: 0.2rem 0 0.2rem 1.2rem;
+    color: #e0e0e0;
+    font-size: 1.08rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-align: left;
+    letter-spacing: 0.01em;
+}
+
+@media (max-width: 900px) {
+    .career-goal-card.action-plan-style {
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+        max-width: 100%;
+    }
+    .career-goal-title {
+        font-size: 1.3rem;
+    }
+} 

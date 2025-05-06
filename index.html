@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 2.2fr;
+            gap: 6rem;
+            align-items: center;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .about-main {
+            text-align: left;
+            padding-right: 4rem;
+            max-width: 600px;
+        }
+
+        .about-image {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: -4rem;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image:hover .image-overlay {
+            transform: translateY(0);
+        }
+
+        .about-image:hover .profile-img {
+            transform: scale(1.05);
+        }
+
+        .overlay-content {
+            text-align: center;
+            color: white;
+        }
+
+        .overlay-content h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        .overlay-content p {
+            margin: 0.5rem 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .about-main {
+                padding-right: 0;
+                max-width: 100%;
+            }
+
+            .about-image {
+                width: 350px;
+                height: 350px;
+                margin: 2rem auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                padding: 0 1rem;
+            }
+            
+            .about-image {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body class="grayscale">
+    <div id="particles-js"></div>
+    
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">E-Portfolio</span>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://leetcode.com/yourusername" class="social-link" target="_blank"><i class="fab fa-leetcode"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="home-main">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-main">Vegarun</span>
+                    <span class="title-sub">The Digital Journey of Shreyash Raj Bamrara</span>
+                </h1>
+                
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <div class="about-grid">
+                    <div class="about-main">
+                        <div class="about-header">
+                            <h2 class="gothic-text">About Me</h2>
+                            <div class="about-line"></div>
+                        </div>
+                        <p class="lead-text">My name is Shreyash Raj Bamrara, and I'm proud to be from the beautiful state of Uttarakhand, India.</p>
+                        <p>I completed my schooling in 2023 from The Himalayan Public School, where I achieved strong academic results and developed a passion for technology. Currently, I am pursuing a Bachelor of Technology in Computer Science at Graphic Era Hill University, with an expected graduation in 2027.</p>
+                        <p>During my time at university, I am expanding my skills in programming, app development, and AI while working on personal and academic projects. I am deeply passionate about creating and upgrading projects, leveraging the latest and emerging technologies.</p>
+                        <p>My ultimate ambition is to become a Game Developer — someone who combines creativity with technical expertise to bring virtual worlds to life and bridge the gap between imagination and reality.</p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Game Development</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-code"></i>
+                                <span>Programming</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-brain"></i>
+                                <span>AI & Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/pf.jpg" alt="Profile Image" class="profile-img">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Game Developer</h3>
+                                <p>Unity | C# | Game Design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education-section premium-edu-bg">
+            <h2 class="section-title gothic-text">Education</h2>
+            <div class="edu-cards-row">
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>The Himalayan Public School</h3>
+                        <p class="institution">Kargi Chowk, Dehradun, Uttarakhand</p>
+                        <p class="year">Completed Schooling</p>
+                        <div class="timeline-actions">
+                            <a href="https://thehimalayanpublicschool.com/" class="visit-btn" target="_blank">Visit</a>
+                            <button class="exp-btn" onclick="openExperience('school-exp')">Experience</button>
+                        </div>
+                    </div>
+                    <div class="edu-img-wrap">
+                        <img src="images/thps-logo.webp" alt="School Logo" class="edu-img-circle right-img">
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Graphic Era Hill University</h3>
+                        <p class="institution">B.Tech Computer Science</p>
+                        <p class="year">Currently Pursuing</p>
+                        <div class="timeline-actions">
+                            <a href="https://gehu.ac.in/" class="visit-btn" target="_blank">Visit</a>
+                            <button class="exp-btn" onclick="openExperience('univ-exp')">Experience</button>
+                        </div>
+                    </div>
+                    <div class="edu-img-wrap">
+                        <img src="images/gehu.jpeg" alt="University Logo" class="edu-img-circle">
+                    </div>
+                </div>
+            </div>
+            <!-- Experience Modals -->
+            <div id="school-exp" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('school-exp')">&times;</span>
+                    <h3>School: The Himalayan Public School</h3>
+                    <p><strong>Year of Completion:</strong> 2023</p>
+                    <p><strong>Board:</strong> ICSE/ISC</p>
+                    <p>At The Himalayan Public School, I consistently excelled academically, achieving <strong>94.6%</strong> in the ISE board exams, including a perfect score in Mathematics. Beyond academics, I took on roles that required leadership and teamwork and gained experiences that strengthened my discipline, clarity of thought, and analytical mindset. These years helped me build a strong work ethic and a habit of always learning more.</p>
+                </div>
+            </div>
+            <div id="univ-exp" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('univ-exp')">&times;</span>
+                    <h3>My University Experience</h3>
+                    <div class="progress-section">
+                        <h4><i class="fas fa-graduation-cap"></i> Academic Performance</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-star"></i> First Year GPA: 9.0</li>
+                            <li><i class="fas fa-star"></i> Current Semester GPA: 8.9</li>
+                            <li><i class="fas fa-book"></i> Currently in 4th Semester</li>
+                        </ul>
+
+                        <h4><i class="fas fa-user-tie"></i> Leadership & Roles</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-users"></i> Class Representative (CR) for A1 Section</li>
+                            <li><i class="fas fa-comments"></i> Managed communication between students and faculty</li>
+                        </ul>
+
+                        <h4><i class="fas fa-trophy"></i> Extracurricular Activities</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-cube"></i> Participated in Rubik's Cube competition</li>
+                            <li><i class="fas fa-users"></i> Competed in Tug of War events</li>
+                            <li><i class="fas fa-laptop-code"></i> Participated in Hack-O-Holic (24-hour hackathon)</li>
+                            <li><i class="fas fa-code"></i> Team project development in hackathon</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="courses-section">
+            <h2 class="section-title gothic-text">Course & Skill Progression</h2>
+            <div class="edu-cards-row">
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Unity & C# Game Development</h3>
+                        <p class="institution">Online/Bootcamp</p>
+                        <p class="year">Completed</p>
+                        <a class="learn-link" onclick="openExperience('unity-exp')">What I've Learned</a>
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>LangChain & RAG</h3>
+                        <p class="institution">Online/Certification</p>
+                        <p class="year">Completed</p>
+                        <a class="learn-link" onclick="openExperience('langchain-exp')">What I've Learned</a>
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Data Structures with C/C++</h3>
+                        <p class="institution">University/Online</p>
+                        <p class="year">Completed</p>
+                        <a class="learn-link" onclick="openExperience('ds-exp')">What I've Learned</a>
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Other Courses & Certificates</h3>
+                        <p class="institution">Various Platforms</p>
+                        <p class="year">Ongoing</p>
+                        <a class="learn-link" onclick="openCertificatesModal()">View Certificates</a>
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>PESE (Practical for Employability Skill Enhancement)</h3>
+                        <p class="institution">University</p>
+                        <p class="year">Ongoing</p>
+                        <div class="progress-bar" style="margin-bottom: 1rem;">
+                            <div class="progress" style="width: 70%">70%</div>
+                        </div>
+                        <div class="pese-buttons" style="display: flex; gap: 1rem; margin-top: 1rem;">
+                            <a href="#" class="pese-btn" style="background: #2c2c2c; color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fas fa-users"></i> Group Discussion
+                            </a>
+                            <a href="#" class="pese-btn" style="background: #2c2c2c; color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fas fa-video"></i> Presentation
+                            </a>
+                            <a href="pese-progress.html" class="pese-btn" style="background: #2c2c2c; color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fas fa-chart-line"></i> View Progress
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- What I've Learned/Progress Modals -->
+            <div id="unity-exp" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('unity-exp')">&times;</span>
+                    <h3>Unity & C# Game Development - What I've Learned</h3>
+                    <ul><li>Game engine fundamentals</li><li>Physics, animation, and scripting in C#</li><li>Building and deploying games</li></ul>
+                </div>
+            </div>
+            <div id="langchain-exp" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('langchain-exp')">&times;</span>
+                    <h3>LangChain & RAG - What I've Learned</h3>
+                    <ul><li>Prompt engineering</li><li>Retrieval-augmented generation</li><li>Integrating LLMs with external data</li></ul>
+                </div>
+            </div>
+            <div id="ds-exp" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('ds-exp')">&times;</span>
+                    <h3>Data Structures with C/C++ - What I've Learned</h3>
+                    <ul><li>Arrays, linked lists, stacks, queues</li><li>Trees, graphs, algorithms</li><li>Problem-solving and optimization</li></ul>
+                </div>
+            </div>
+            <div id="pese-exp" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('pese-exp')">&times;</span>
+                    <h3><i class="fas fa-chart-line"></i> PESE Progress & SWOC Analysis</h3>
+                    <div class="swoc-grid">
+                        <div class="swoc-card strengths">
+                            <div class="swoc-header">
+                                <i class="fas fa-bolt"></i>
+                                <h4>Strengths</h4>
+                            </div>
+                            <ul class="swoc-list">
+                                <li><i class="fas fa-check-circle"></i> Strong work ethic</li>
+                                <li><i class="fas fa-check-circle"></i> Discipline & consistency</li>
+                                <li><i class="fas fa-check-circle"></i> Problem-solving mindset</li>
+                                <li><i class="fas fa-check-circle"></i> Pattern recognition</li>
+                                <li><i class="fas fa-check-circle"></i> Leadership & collaboration skills</li>
+                                <li><i class="fas fa-check-circle"></i> Ability to prioritize and work efficiently</li>
+                                <li><i class="fas fa-check-circle"></i> Adaptability to new challenges</li>
+                            </ul>
+                        </div>
+                        <div class="swoc-card weaknesses">
+                            <div class="swoc-header">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <h4>Weaknesses</h4>
+                            </div>
+                            <ul class="swoc-list">
+                                <li><i class="fas fa-times-circle"></i> Struggles with time management</li>
+                                <li><i class="fas fa-times-circle"></i> Difficulty balancing health & work</li>
+                                <li><i class="fas fa-times-circle"></i> Tendency to overanalyze situations</li>
+                                <li><i class="fas fa-times-circle"></i> Making simple tasks more complex than needed</li>
+                                <li><i class="fas fa-times-circle"></i> Prioritizing other tasks over personal interests</li>
+                            </ul>
+                        </div>
+                        <div class="swoc-card opportunities">
+                            <div class="swoc-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Opportunities</h4>
+                            </div>
+                            <ul class="swoc-list">
+                                <li><i class="fas fa-rocket"></i> Exposure to cutting-edge technologies</li>
+                                <li><i class="fas fa-rocket"></i> Opportunities for industry projects & internships</li>
+                                <li><i class="fas fa-rocket"></i> Advancements in game development & AI</li>
+                                <li><i class="fas fa-rocket"></i> Ability to engage in personal and professional growth in evolving fields</li>
+                            </ul>
+                        </div>
+                        <div class="swoc-card challenges">
+                            <div class="swoc-header">
+                                <i class="fas fa-mountain"></i>
+                                <h4>Challenges</h4>
+                            </div>
+                            <ul class="swoc-list">
+                                <li><i class="fas fa-flag"></i> Keeping up with fast-paced tech advancements</li>
+                                <li><i class="fas fa-flag"></i> Managing multiple roles and responsibilities</li>
+                                <li><i class="fas fa-flag"></i> Staying organized under pressure and deadlines</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="progress-overview">
+                        <h4><i class="fas fa-chart-bar"></i> Current Progress</h4>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%">70%</div>
+                        </div>
+                        <p class="progress-note">Making steady progress in developing professional skills and addressing identified areas for improvement.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Certificates Modal -->
+            <div id="certificates-modal" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeCertificatesModal()">&times;</span>
+                    <h3>Certificates</h3>
+                    <div id="certificates-list">
+                        <!-- Certificate images/links will go here -->
+                    </div>
+                    <input type="file" id="certificate-upload" accept="image/*,application/pdf">
+                    <button onclick="uploadCertificate()" class="submit-button">Upload</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2 class="section-title gothic-text">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card about-style rammy-card">
+                    <div class="project-image">
+                        <img src="images/rammy.png" alt="Rammy - Tower Defense Game">
+                    </div>
+                    <div class="project-info">
+                        <h3>Rammy</h3>
+                        <p>A tower defense game built in Unity where players protect a medieval city from waves of ramming enemies. Features unique enemy AI, custom 3D models, and level progression.</p>
+                        <div class="project-tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Game Design</span>
+                        </div>
+                        <a href="#" class="project-github-btn" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card about-style nelo-card">
+                    <div class="project-image">
+                        <img src="images/nelo.png" alt="Nelo - FPS Game">
+                    </div>
+                    <div class="project-info">
+                        <h3>Nelo</h3>
+                        <p>Unity-based first-person shooter where the player defends against relentless intergalactic war machines. Enemies emerge through dimensional gates or are manufactured by rival planets. Designed with dynamic combat, survival mechanics, and sci-fi aesthetics.</p>
+                        <div class="project-tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Game Design</span>
+                        </div>
+                        <a href="#" class="project-github-btn" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+                <div class="project-card about-style ganu-card">
+                    <div class="project-image">
+                        <img src="images/ganu.png" alt="Ganu - A Personalized Chatbot">
+                    </div>
+                    <div class="project-info">
+                        <h3>Ganu - A Personalized Chatbot</h3>
+                        <p>Personalized AI chatbot platform built with LangChain and Streamlit. It summarizes, compresses, and explains subject-specific study material while mimicking the unique personality of each subject's faculty member. Adaptive chain routing ensures dynamic interactions, and responses are conditioned on disciplined, well-mannered student queries.</p>
+                        <div class="project-tags">
+                            <span>LangChain</span>
+                            <span>Streamlit</span>
+                            <span>Python</span>
+                            <span>Chain Routing</span>
+                        </div>
+                        <a href="#" class="project-github-btn" target="_blank">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="more-projects">
+                <button class="more-projects-btn">
+                    <span>More Projects Coming Soon</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="hobbies" class="hobbies-section">
+            <h2 class="section-title gothic-text">Hobbies</h2>
+            <div class="edu-cards-row">
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Weight Lifting</h3>
+                        <p class="description">Passionate about strength training and fitness, focusing on progressive overload and healthy living.</p>
+                        <a class="learn-link" onclick="openExperience('hobby-weight')">My Progress</a>
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Puzzle Solving (Rubik's Cube)</h3>
+                        <p class="description">Enjoy solving Rubik's cubes and other logic puzzles for mental agility and fun.</p>
+                        <a class="learn-link" onclick="openExperience('hobby-puzzle')">My Progress</a>
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Video Gaming (Completionist)</h3>
+                        <p class="description">Love to complete games 100%, unlock all achievements, and explore every secret.</p>
+                        <a class="learn-link" onclick="openExperience('hobby-gaming')">My Progress</a>
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Casual Chess</h3>
+                        <p class="description">Play chess for fun and strategy, enjoying friendly matches and online puzzles.</p>
+                        <a class="learn-link" onclick="openExperience('hobby-chess')">My Progress</a>
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Book Reading</h3>
+                        <p class="description">Philosophical / Existential / Literary. Mark Manson's books: Self-Help / Psychology / Modern Stoicism-inspired.</p>
+                        <a class="learn-link" onclick="openExperience('hobby-books')">My Progress</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Hobby Progress Modals -->
+            <div id="hobby-weight" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('hobby-weight')">&times;</span>
+                    <h3><i class="fas fa-dumbbell"></i> Weight Lifting Progress</h3>
+                    <div class="progress-section">
+                        <h4><i class="fas fa-chart-line"></i> Strength Stats</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-weight-hanging"></i> Bench Press: 95 kg</li>
+                            <li><i class="fas fa-weight-hanging"></i> Squat: 135 kg</li>
+                            <li><i class="fas fa-weight-hanging"></i> Shoulder Press: 30 kg dumbbells</li>
+                            <li><i class="fas fa-walking"></i> Highest step count: ~42,000</li>
+                        </ul>
+                        <h4><i class="fas fa-bullseye"></i> Focus Areas</h4>
+                        <ul class="focus-list">
+                            <li>Progressive overload</li>
+                            <li>Full-body strength</li>
+                            <li>Endurance training</li>
+                            <li>Form perfection</li>
+                            <li>Recovery optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="hobby-puzzle" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('hobby-puzzle')">&times;</span>
+                    <h3><i class="fas fa-cube"></i> Puzzle Solving Progress</h3>
+                    <div class="progress-section">
+                        <h4><i class="fas fa-stopwatch"></i> Speedsolving Times</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-cube"></i> 2x2: 10–15s</li>
+                            <li><i class="fas fa-cube"></i> 3x3: ~50s avg</li>
+                            <li><i class="fas fa-cube"></i> 4x4: 2–3m</li>
+                            <li><i class="fas fa-cube"></i> 5x5: 5–6m</li>
+                            <li><i class="fas fa-cube"></i> Pyraminx: ~20s avg</li>
+                            <li><i class="fas fa-cube"></i> Megaminx: 5–6m</li>
+                            <li><i class="fas fa-cube"></i> Mirror: 2–3m</li>
+                        </ul>
+                        <h4><i class="fas fa-brain"></i> Focus Areas</h4>
+                        <ul class="focus-list">
+                            <li>Spatial reasoning</li>
+                            <li>Memory training</li>
+                            <li>Dexterity improvement</li>
+                            <li>Algorithm memorization</li>
+                            <li>Pattern recognition</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="hobby-gaming" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('hobby-gaming')">&times;</span>
+                    <h3><i class="fas fa-gamepad"></i> Video Gaming Progress</h3>
+                    <div class="progress-section">
+                        <h4><i class="fas fa-trophy"></i> Milestones</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-medal"></i> Halo 1–4: Legendary</li>
+                            <li><i class="fas fa-medal"></i> Genshin Impact: 100% (till current update)</li>
+                            <li><i class="fas fa-medal"></i> Wuthering Waves: 100% (till current update)</li>
+                            <li><i class="fas fa-medal"></i> Hollow Knight: 109%</li>
+                            <li><i class="fas fa-gamepad"></i> Call of Duty Series</li>
+                            <li><i class="fas fa-gamepad"></i> Clash of Clans</li>
+                            <li><i class="fas fa-gamepad"></i> Clash Royale</li>
+                            <li><i class="fas fa-gamepad"></i> And many more...</li>
+                        </ul>
+                        <h4><i class="fas fa-bullseye"></i> Focus Areas</h4>
+                        <ul class="focus-list">
+                            <li>Achievement hunting</li>
+                            <li>Exploration</li>
+                            <li>Strategy development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="hobby-chess" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('hobby-chess')">&times;</span>
+                    <h3><i class="fas fa-chess"></i> Chess Progress</h3>
+                    <div class="progress-section">
+                        <h4><i class="fas fa-chart-line"></i> Current Status</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-chess"></i> Chess.com: ~1000 Elo</li>
+                            <li><i class="fas fa-puzzle-piece"></i> Daily puzzles: 1500+ solved</li>
+                            <li><i class="fas fa-chess-knight"></i> Tactics & strategy</li>
+                            <li><i class="fas fa-chess-board"></i> Opening repertoire: Italian, Queen's Gambit</li>
+                            <li><i class="fas fa-chess-king"></i> Endgame practice: King & Pawn</li>
+                        </ul>
+                        <h4><i class="fas fa-bullseye"></i> Focus Areas</h4>
+                        <ul class="focus-list">
+                            <li>Logic development</li>
+                            <li>Pattern recognition</li>
+                            <li>Long-term planning</li>
+                            <li>Positional understanding</li>
+                            <li>Calculation improvement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="hobby-books" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('hobby-books')">&times;</span>
+                    <h3><i class="fas fa-book"></i> Book Reading Progress</h3>
+                    <div class="progress-section">
+                        <h4><i class="fas fa-bookmark"></i> Books Completed</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-book"></i> Rich Dad Poor Dad</li>
+                            <li><i class="fas fa-book"></i> 48 Laws of Power</li>
+                            <li><i class="fas fa-book"></i> Ikigai</li>
+                            <li><i class="fas fa-book"></i> Atomic Habits</li>
+                            <li><i class="fas fa-book"></i> Man's Search for Meaning</li>
+                            <li><i class="fas fa-book"></i> Meditations</li>
+                            <li><i class="fas fa-book"></i> Healing is the New High</li>
+                            <li><i class="fas fa-book"></i> The Prince</li>
+                            <li><i class="fas fa-book"></i> Psychology of Money</li>
+                            <li><i class="fas fa-book"></i> And many more...</li>
+                        </ul>
+                        <h4><i class="fas fa-tags"></i> Genres</h4>
+                        <ul class="focus-list">
+                            <li>Philosophy</li>
+                            <li>Self-Help</li>
+                            <li>Psychology</li>
+                            <li>Finance</li>
+                            <li>Strategy</li>
+                            <li>And more...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title gothic-text">Contact & Social Media</h2>
+            <div class="contact-content">
+                <div class="social-buttons">
+                    <div class="social-buttons-row">
+                        <a href="https://github.com/ShreyashRajBamrara" class="social-link-card github" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://leetcode.com/u/ShreyashBamrara/" class="social-link-card leetcode" target="_blank" title="LeetCode">
+                            <svg viewBox="0 0 32 32" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:auto;">
+                                <path d="M7.5 16L16 7.5L24.5 16L16 24.5L7.5 16Z" fill="#fff"/>
+                                <path d="M12.5 16L16 12.5L19.5 16L16 19.5L12.5 16Z" fill="#f9ae3c"/>
+                                <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM16 28C9.373 28 4 22.627 4 16C4 9.373 9.373 4 16 4C22.627 4 28 9.373 28 16C28 22.627 22.627 28 16 28Z" fill="#222"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shreyash-bamrara-91a22a286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link-card linkedin" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/shrey_rb/profilecard/?igsh=Y3ltbmJ6cWRjOHRk" class="social-link-card instagram" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/qr/72R5HOAQKHC3A1" class="social-link-card whatsapp" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form about-style">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-button monochrome">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
