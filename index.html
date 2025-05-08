@@ -330,6 +330,104 @@
         .exp-modal-content, .modal-content {
             animation: modalFadeIn 0.3s ease-out;
         }
+
+        .about-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(249, 174, 60, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-item:hover {
+            background: rgba(249, 174, 60, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .highlight-item i {
+            color: #f9ae3c;
+        }
+
+        @media (max-width: 768px) {
+            .about-highlights {
+                justify-content: center;
+                gap: 0.8rem;
+            }
+
+            .highlight-item {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .about-image {
+                width: 250px;
+                height: 250px;
+                margin: 0 auto 2rem;
+            }
+
+            .about-main {
+                text-align: center;
+                padding: 0 1rem;
+            }
+        }
+
+        /* Update hero section styles */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+        }
+
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            border: 4px solid #f9ae3c;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(249, 174, 60, 0.3);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title-sub {
+            display: block;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            color: #f9ae3c;
+        }
+
+        @media (max-width: 768px) {
+            .hero-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .title-sub {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body class="grayscale">
@@ -360,11 +458,12 @@
     <main class="home-main">
         <section class="hero-section">
             <div class="hero-content">
+                <div class="hero-image">
+                    <img src="images/pf.jpg" alt="Shreyash Raj Bamrara" class="clickable-image" onclick="openImageModal(this.src)">
+                </div>
                 <h1 class="hero-title">
-                    <span class="title-main">Vegarun</span>
                     <span class="title-sub">The Digital Journey of Shreyash Raj Bamrara</span>
                 </h1>
-                
             </div>
         </section>
 
@@ -738,7 +837,7 @@
             <div class="projects-grid">
                 <div class="project-card about-style rammy-card">
                     <div class="project-image">
-                        <img src="images/rammy.png" alt="Rammy - Tower Defense Game" class="clickable-image" onclick="openImageModal(this.src)">
+                        <img src="images/Rammy.png" alt="Rammy - Tower Defense Game" class="clickable-image" onclick="openImageModal(this.src)">
                     </div>
                     <div class="project-info">
                         <h3>Rammy</h3>
@@ -753,7 +852,7 @@
                 </div>
                 <div class="project-card about-style nelo-card">
                     <div class="project-image">
-                        <img src="images/nelo.png" alt="Nelo - FPS Game" class="clickable-image" onclick="openImageModal(this.src)">
+                        <img src="images/Nelo.png" alt="Nelo - FPS Game" class="clickable-image" onclick="openImageModal(this.src)">
                     </div>
                     <div class="project-info">
                         <h3>Nelo</h3>
