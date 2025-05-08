@@ -85,9 +85,9 @@
 
         @media (max-width: 1024px) {
             .about-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+                padding: 0 1.5rem;
             }
 
             .about-main {
@@ -98,24 +98,248 @@
             .about-image {
                 width: 350px;
                 height: 350px;
-                margin: 2rem auto;
+                margin: 0 auto;
+            }
+
+            .about-main p {
+                font-size: 0.95rem;
+                line-height: 1.5;
             }
         }
 
         @media (max-width: 768px) {
             .about-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
                 padding: 0 1rem;
             }
             
             .about-image {
-                width: 300px;
-                height: 300px;
+                width: 280px;
+                height: 280px;
             }
+
+            .about-main p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+            .about-highlights {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .highlight-item {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .about-main {
+                order: 2;
+            }
+
+            .about-image {
+                order: 1;
+                width: 250px;
+                height: 250px;
+                margin: 0 auto;
+            }
+
+            .about-main p {
+                font-size: 0.85rem;
+                line-height: 1.4;
+            }
+
+            .about-highlights {
+                justify-content: center;
+            }
+
+            .highlight-item {
+                font-size: 0.8rem;
+            }
+        }
+
+        .achievements-section {
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .achievement-icon {
+            font-size: 2.5rem;
+            color: #f9ae3c;
+            transition: all 0.3s ease;
+        }
+
+        .edu-card:hover .achievement-icon {
+            transform: scale(1.2);
+            color: #ffd700;
+        }
+
+        .edu-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .edu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .edu-card .edu-info {
+            transition: all 0.3s ease;
+        }
+
+        .edu-card:hover .edu-info h3 {
+            color: #f9ae3c;
+        }
+
+        .exp-btn {
+            transition: all 0.3s ease;
+        }
+
+        .exp-btn:hover {
+            background-color: #f9ae3c;
+            color: #000;
+        }
+
+        @media (max-width: 768px) {
+            .achievement-icon {
+                font-size: 2rem;
+            }
+        }
+
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(249, 174, 60, 0.2);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .modal-download {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: #2c2c2c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .modal-download:hover {
+            background: #f9ae3c;
+            color: #000;
+        }
+
+        .clickable-image {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .clickable-image:hover {
+            transform: scale(1.05);
+        }
+
+        .close-btn:hover, .modal-close:hover {
+            background: #f9ae3c;
+            color: #000;
+            transform: rotate(90deg);
+        }
+
+        .exp-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+
+        .exp-modal-content {
+            background-color: #1a1a1a;
+            margin: 5% auto;
+            padding: 2rem;
+            border: 1px solid #f9ae3c;
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(249, 174, 60, 0.2);
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .exp-modal-content, .modal-content {
+            animation: modalFadeIn 0.3s ease-out;
         }
     </style>
 </head>
 <body class="grayscale">
-    <div id="particles-js"></div>
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close" title="Close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <a id="downloadLink" class="modal-download" download>
+            <i class="fas fa-download"></i> Download
+        </a>
+    </div>
     
     <nav class="navigation">
         <div class="nav-container">
@@ -126,6 +350,9 @@
                 <a href="https://github.com/yourusername" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://leetcode.com/yourusername" class="social-link" target="_blank"><i class="fab fa-leetcode"></i></a>
+                <a href="images/resume.pdf" class="resume-btn" style="background: #2c2c2c; color: white; padding: 0.5rem 1rem; border-radius: 12px; text-decoration: none; transition: all 0.3s ease; margin-left: 1rem;" download="resume.pdf">
+                    <i class="fas fa-file-alt"></i> Resume
+                </a>
             </div>
         </div>
     </nav>
@@ -169,7 +396,7 @@
                         </div>
                     </div>
                     <div class="about-image">
-                        <img src="images/pf.jpg" alt="Profile Image" class="profile-img">
+                        <img src="images/pf.jpg" alt="Profile Image" class="profile-img clickable-image" onclick="openImageModal(this.src)">
                         <div class="image-overlay">
                             <div class="overlay-content">
                                 <h3>Game Developer</h3>
@@ -186,20 +413,6 @@
             <div class="edu-cards-row">
                 <div class="edu-card about-style animate-on-scroll">
                     <div class="edu-info">
-                        <h3>The Himalayan Public School</h3>
-                        <p class="institution">Kargi Chowk, Dehradun, Uttarakhand</p>
-                        <p class="year">Completed Schooling</p>
-                        <div class="timeline-actions">
-                            <a href="https://thehimalayanpublicschool.com/" class="visit-btn" target="_blank">Visit</a>
-                            <button class="exp-btn" onclick="openExperience('school-exp')">Experience</button>
-                        </div>
-                    </div>
-                    <div class="edu-img-wrap">
-                        <img src="images/thps-logo.webp" alt="School Logo" class="edu-img-circle right-img">
-                    </div>
-                </div>
-                <div class="edu-card about-style animate-on-scroll">
-                    <div class="edu-info">
                         <h3>Graphic Era Hill University</h3>
                         <p class="institution">B.Tech Computer Science</p>
                         <p class="year">Currently Pursuing</p>
@@ -209,7 +422,21 @@
                         </div>
                     </div>
                     <div class="edu-img-wrap">
-                        <img src="images/gehu.jpeg" alt="University Logo" class="edu-img-circle">
+                        <img src="images/gehu.jpeg" alt="University Logo" class="edu-img-circle clickable-image" onclick="openImageModal(this.src)">
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>The Himalayan Public School</h3>
+                        <p class="institution">Kargi Chowk, Dehradun, Uttarakhand</p>
+                        <p class="year">Completed Schooling</p>
+                        <div class="timeline-actions">
+                            <a href="https://thehimalayanpublicschool.com/" class="visit-btn" target="_blank">Visit</a>
+                            <button class="exp-btn" onclick="openExperience('school-exp')">Experience</button>
+                        </div>
+                    </div>
+                    <div class="edu-img-wrap">
+                        <img src="images/thps-logo.webp" alt="School Logo" class="edu-img-circle right-img clickable-image" onclick="openImageModal(this.src)">
                     </div>
                 </div>
             </div>
@@ -247,6 +474,97 @@
                             <li><i class="fas fa-users"></i> Competed in Tug of War events</li>
                             <li><i class="fas fa-laptop-code"></i> Participated in Hack-O-Holic (24-hour hackathon)</li>
                             <li><i class="fas fa-code"></i> Team project development in hackathon</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="achievements-section premium-edu-bg">
+            <h2 class="section-title gothic-text">Achievements</h2>
+            <div class="edu-cards-row">
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Academic Excellence</h3>
+                        <p class="institution">The Himalayan Public School</p>
+                        <p class="year">2023</p>
+                        <div class="timeline-actions">
+                            <button class="exp-btn" onclick="openExperience('achievement-academic')">Details</button>
+                        </div>
+                    </div>
+                    <div class="edu-img-wrap">
+                        <i class="fas fa-medal achievement-icon"></i>
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Leadership Role</h3>
+                        <p class="institution">House Captain</p>
+                        <p class="year">High School</p>
+                        <div class="timeline-actions">
+                            <button class="exp-btn" onclick="openExperience('achievement-leadership')">Details</button>
+                        </div>
+                    </div>
+                    <div class="edu-img-wrap">
+                        <i class="fas fa-crown achievement-icon"></i>
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>University Performance</h3>
+                        <p class="institution">Graphic Era Hill University</p>
+                        <p class="year">2023-2024</p>
+                        <div class="timeline-actions">
+                            <button class="exp-btn" onclick="openExperience('achievement-university')">Details</button>
+                        </div>
+                    </div>
+                    <div class="edu-img-wrap">
+                        <i class="fas fa-graduation-cap achievement-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievement Modals -->
+            <div id="achievement-academic" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('achievement-academic')">&times;</span>
+                    <h3><i class="fas fa-medal"></i> Academic Excellence</h3>
+                    <div class="progress-section">
+                        <h4><i class="fas fa-trophy"></i> Key Achievements</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-star"></i> School Topper - The Himalayan Public School (2023)</li>
+                            <li><i class="fas fa-star"></i> Perfect Score in Mathematics (100/100) - ISC Board Exam</li>
+                            <li><i class="fas fa-star"></i> Outstanding Academic Performance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="achievement-leadership" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('achievement-leadership')">&times;</span>
+                    <h3><i class="fas fa-crown"></i> Leadership Achievements</h3>
+                    <div class="progress-section">
+                        <h4><i class="fas fa-users"></i> Leadership Roles</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-user-tie"></i> House Captain - High School</li>
+                            <li><i class="fas fa-tasks"></i> Led and organized school events</li>
+                            <li><i class="fas fa-handshake"></i> Managed student activities and competitions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="achievement-university" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('achievement-university')">&times;</span>
+                    <h3><i class="fas fa-graduation-cap"></i> University Achievements</h3>
+                    <div class="progress-section">
+                        <h4><i class="fas fa-chart-line"></i> Academic Performance</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-star"></i> First Year GPA: 9.0</li>
+                            <li><i class="fas fa-user-tie"></i> Class Representative - A1 Section</li>
+                            <li><i class="fas fa-users"></i> Active participation in university activities</li>
                         </ul>
                     </div>
                 </div>
@@ -297,13 +615,16 @@
                             <div class="progress" style="width: 70%">70%</div>
                         </div>
                         <div class="pese-buttons" style="display: flex; gap: 1rem; margin-top: 1rem;">
-                            <a href="#" class="pese-btn" style="background: #2c2c2c; color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;">
+                            <a href="https://photos.app.goo.gl/aaa54KMuEntuRxtu6" class="pese-btn" style="background: #2c2c2c; color: white; padding: 0.5rem 1rem; border-radius: 12px; text-decoration: none; transition: all 0.3s ease;" target="_blank" rel="noopener noreferrer">
                                 <i class="fas fa-users"></i> Group Discussion
                             </a>
-                            <a href="#" class="pese-btn" style="background: #2c2c2c; color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;">
+                            <a href="#" class="pese-btn" style="background: #2c2c2c; color: white; padding: 0.5rem 1rem; border-radius: 12px; text-decoration: none; transition: all 0.3s ease;">
                                 <i class="fas fa-video"></i> Presentation
                             </a>
-                            <a href="pese-progress.html" class="pese-btn" style="background: #2c2c2c; color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;">
+                            <a href="https://photos.app.goo.gl/jBzgEhvaBGvea8hy5" class="pese-btn" style="background: #2c2c2c; color: white; padding: 0.5rem 1rem; border-radius: 12px; text-decoration: none; transition: all 0.3s ease;" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-microphone"></i> JAM Session
+                            </a>
+                            <a href="pese-progress.html" class="pese-btn" style="background: #2c2c2c; color: white; padding: 0.5rem 1rem; border-radius: 12px; text-decoration: none; transition: all 0.3s ease;">
                                 <i class="fas fa-chart-line"></i> View Progress
                             </a>
                         </div>
@@ -417,7 +738,7 @@
             <div class="projects-grid">
                 <div class="project-card about-style rammy-card">
                     <div class="project-image">
-                        <img src="images/rammy.png" alt="Rammy - Tower Defense Game">
+                        <img src="images/rammy.png" alt="Rammy - Tower Defense Game" class="clickable-image" onclick="openImageModal(this.src)">
                     </div>
                     <div class="project-info">
                         <h3>Rammy</h3>
@@ -432,7 +753,7 @@
                 </div>
                 <div class="project-card about-style nelo-card">
                     <div class="project-image">
-                        <img src="images/nelo.png" alt="Nelo - FPS Game">
+                        <img src="images/nelo.png" alt="Nelo - FPS Game" class="clickable-image" onclick="openImageModal(this.src)">
                     </div>
                     <div class="project-info">
                         <h3>Nelo</h3>
@@ -447,7 +768,7 @@
                 </div>
                 <div class="project-card about-style ganu-card">
                     <div class="project-image">
-                        <img src="images/ganu.png" alt="Ganu - A Personalized Chatbot">
+                        <img src="images/ganu.png" alt="Ganu - A Personalized Chatbot" class="clickable-image" onclick="openImageModal(this.src)">
                     </div>
                     <div class="project-info">
                         <h3>Ganu - A Personalized Chatbot</h3>
@@ -506,6 +827,13 @@
                         <h3>Book Reading</h3>
                         <p class="description">Philosophical / Existential / Literary. Mark Manson's books: Self-Help / Psychology / Modern Stoicism-inspired.</p>
                         <a class="learn-link" onclick="openExperience('hobby-books')">My Progress</a>
+                    </div>
+                </div>
+                <div class="edu-card about-style animate-on-scroll">
+                    <div class="edu-info">
+                        <h3>Sketching</h3>
+                        <p class="description">Enjoy recreating 2D characters and designs through pencil sketches, focusing on anime and cartoon styles.</p>
+                        <a class="learn-link" onclick="openExperience('hobby-sketching')">My Progress</a>
                     </div>
                 </div>
             </div>
@@ -638,6 +966,44 @@
                     </div>
                 </div>
             </div>
+            <div id="hobby-sketching" class="exp-modal">
+                <div class="exp-modal-content">
+                    <span class="close-btn" onclick="closeExperience('hobby-sketching')">&times;</span>
+                    <h3><i class="fas fa-pencil-alt"></i> Sketching Progress</h3>
+                    <div class="progress-section">
+                        <h4><i class="fas fa-palette"></i> Completed Works</h4>
+                        <ul class="progress-list">
+                            <li><i class="fas fa-user"></i> Total Sketches: 12+</li>
+                            <li><i class="fas fa-child"></i> Anime & Cartoon Characters</li>
+                            <li><i class="fas fa-gamepad"></i> Video Game Characters</li>
+                            <li><i class="fas fa-pencil-ruler"></i> Simple Background Elements</li>
+                        </ul>
+                        <h4><i class="fas fa-paint-brush"></i> Materials Used</h4>
+                        <ul class="focus-list">
+                            <li>Pencil Sketches</li>
+                            <li>Pen Artwork</li>
+                            <li>Marker Drawings</li>
+                            <li>Whitener Highlights</li>
+                        </ul>
+                        <h4><i class="fas fa-star"></i> Skills Developed</h4>
+                        <ul class="focus-list">
+                            <li>Character Proportions</li>
+                            <li>Line Art & Inking</li>
+                            <li>Basic Shading</li>
+                            <li>Facial Features</li>
+                            <li>Pose Replication</li>
+                        </ul>
+                        <h4><i class="fas fa-bullseye"></i> Focus Areas</h4>
+                        <ul class="focus-list">
+                            <li>Anime Style Characters</li>
+                            <li>Cartoon Character Copies</li>
+                            <li>Simple Backgrounds</li>
+                            <li>Character Expressions</li>
+                            <li>Basic Composition</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="contact" class="contact-section">
@@ -680,5 +1046,53 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Update the modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const downloadLink = document.getElementById('downloadLink');
+        const closeBtn = document.getElementsByClassName('modal-close')[0];
+
+        function openImageModal(src) {
+            modal.style.display = "block";
+            modalImg.src = src;
+            downloadLink.href = src;
+            document.body.style.overflow = "hidden";
+            // Add animation class
+            modalImg.style.animation = "modalFadeIn 0.3s ease-out";
+        }
+
+        // Update close button functionality
+        function closeModal(modalElement) {
+            modalElement.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        closeBtn.onclick = function() {
+            closeModal(modal);
+        }
+
+        // Update window click handler
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal(modal);
+            }
+        }
+
+        // Update escape key handler
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal(modal);
+            }
+        });
+
+        // Update experience modal close buttons
+        document.querySelectorAll('.close-btn').forEach(btn => {
+            btn.onclick = function() {
+                const modal = this.closest('.exp-modal');
+                closeModal(modal);
+            }
+        });
+    </script>
 </body>
 </html> 
