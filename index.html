@@ -394,6 +394,7 @@
             text-align: center;
             z-index: 2;
             position: relative;
+            padding: 2rem 0;
         }
 
         .hero-image {
@@ -425,20 +426,15 @@
             margin-top: 1rem;
             color: #f9ae3c;
             text-shadow: 0 0 10px rgba(249, 174, 60, 0.3);
-        }
-
-        @media (max-width: 768px) {
-            .hero-image {
-                width: 200px;
-                height: 200px;
-            }
-
-            .title-sub {
-                font-size: 1.4rem;
-            }
+            padding: 0 1rem;
         }
 
         /* Update about section styles */
+        .about-section {
+            padding: 4rem 0;
+            position: relative;
+        }
+
         .about-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -455,13 +451,95 @@
             margin: 0 auto;
         }
 
+        .about-main p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .about-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .about-line {
+            width: 100px;
+            height: 3px;
+            background: #f9ae3c;
+            margin: 1rem auto;
+        }
+
         @media (max-width: 768px) {
+            .hero-section {
+                min-height: 80vh;
+                padding: 1rem;
+            }
+
+            .hero-content {
+                padding: 1rem 0;
+            }
+
+            .hero-image {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 1.5rem;
+            }
+
+            .title-sub {
+                font-size: 1.4rem;
+                padding: 0 0.5rem;
+            }
+
+            .about-section {
+                padding: 2rem 0;
+            }
+
             .about-grid {
                 padding: 0 1rem;
             }
 
             .about-main {
                 text-align: center;
+            }
+
+            .about-main p {
+                text-align: left;
+                font-size: 0.95rem;
+                line-height: 1.5;
+                margin-bottom: 1rem;
+            }
+
+            .about-header {
+                margin-bottom: 1.5rem;
+            }
+
+            .about-highlights {
+                justify-content: center;
+                gap: 0.8rem;
+                margin-top: 1.5rem;
+            }
+
+            .highlight-item {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                min-height: 70vh;
+            }
+
+            .hero-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .title-sub {
+                font-size: 1.2rem;
+            }
+
+            .about-main p {
+                font-size: 0.9rem;
             }
         }
     </style>
